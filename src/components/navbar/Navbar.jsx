@@ -1,4 +1,8 @@
 import React from 'react';
+import { FiShoppingCart } from "react-icons/fi";
+import { MdLogin } from "react-icons/md";
+
+
 
 const Navbar = () => {
     return (
@@ -20,6 +24,7 @@ const Navbar = () => {
                         <li><a>Pricing</a></li>
                         <li><a>Testimonials</a></li>
                         <li><a>FAQ</a></li>
+                        <li><a>Login <MdLogin size={15}/></a></li>
                     </ul>
                     </div>
                     <a className="text-4xl font-bold bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">DigiTools</a>
@@ -36,7 +41,9 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="navbar-end">
-                        <a className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full px-4 py-3">Get Started</a>
+                        <a className="cursor-pointer"><FiShoppingCart /></a>
+                        <a className="hidden md:inline mx-4 cursor-pointer">Login</a>
+                        <a className="hidden md:inline-flex btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full px-4 py-3">Get Started</a>
                     </div>
                 </div>
             </div>
