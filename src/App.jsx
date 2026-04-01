@@ -8,7 +8,7 @@ import Main from './components/main/Main'
 import ToolCard from './components/toolCard/ToolCard'
 import Pricing from './components/pricing/Pricing'
 import ToolCardBody from './components/toolCardBody/ToolCardBody'
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 
 const fetchTools = async() =>{
   const res = await fetch('/data.json');
@@ -16,14 +16,15 @@ const fetchTools = async() =>{
 }
 const toolsPromise = fetchTools();
 function App() {
+  const[cartItems, setCartItems] = useState([]);
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar cartItems={cartItems}></Navbar>
       <Banner></Banner>
       <Stats></Stats>
-      <Main></Main>
+      <Main cartItems={cartItems}></Main>
       <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
-        <ToolCardBody toolsPromise={toolsPromise}></ToolCardBody>
+        <ToolCardBody toolsPromise={toolsPromise} cartItems={cartItems} setCartItems={setCartItems}></ToolCardBody>
       </Suspense>
       <Steps></Steps>
       <Pricing></Pricing>

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-const Main = () => {
+const Main = ({cartItems}) => {
     const[isProductsTab, setTab] = useState(true);
     return (
         <div>
@@ -9,7 +9,7 @@ const Main = () => {
                 <p className="text-[#627382] mb-4">Choose from our curated collection of premium digital products designed <br></br>to boost your productivity and creativity.</p>
                 <div className="inline-flex rounded-full border border-neutral-200 p-0.5 mb-10">
                     <button onClick={()=>setTab(true)} className={`btn font-bold py-6 px-6 rounded-full ${isProductsTab? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white":"text-[#25065D] border-none bg-white"}`}>Products</button>
-                    <button onClick={()=>setTab(false)} className={`btn font-bold py-6 px-6 rounded-full ${!isProductsTab? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white":"text-[#25065D] border-none bg-white"}`}>Cart (0)</button>
+                    <button onClick={()=>setTab(false)} className={`btn font-bold py-6 px-6 rounded-full ${!isProductsTab? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white":"text-[#25065D] border-none bg-white"}`}>Cart ({cartItems.length})</button>
                 </div>
             </div>
         </div>

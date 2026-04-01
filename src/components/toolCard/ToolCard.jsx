@@ -22,7 +22,7 @@ const badgeStyles = {
     "new": "badge-success"
 }
 
-const ToolCard = ({tool}) => {
+const ToolCard = ({tool, cartItems, setCartItems}) => {
     return (
         <div>
             <div className="card bg-base-100 shadow-sm flex flex-col h-full">
@@ -52,7 +52,7 @@ const ToolCard = ({tool}) => {
                         }
                     </ul>
                     <div className="mt-6">
-                        <button className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white font-bold py-4 w-full rounded-full">Buy Now</button>
+                        <button onClick={()=>setCartItems([...cartItems, tool])} className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white font-bold py-4 w-full rounded-full">Buy Now</button>
                     </div>
                 </div>
             </div>
