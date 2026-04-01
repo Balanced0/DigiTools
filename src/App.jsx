@@ -9,6 +9,7 @@ import ToolCard from './components/toolCard/ToolCard'
 import Pricing from './components/pricing/Pricing'
 import ToolCardBody from './components/toolCardBody/ToolCardBody'
 import { Suspense, useState } from 'react'
+import CartBody from './components/cartBody/CartBody'
 
 const fetchTools = async() =>{
   const res = await fetch('/data.json');

@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import CartBody from '../cartBody/CartBody';
 
 const Main = ({cartItems}) => {
     const[isProductsTab, setTab] = useState(true);
@@ -12,6 +13,9 @@ const Main = ({cartItems}) => {
                     <button onClick={()=>setTab(false)} className={`btn font-bold py-6 px-6 rounded-full ${!isProductsTab? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white":"text-[#25065D] border-none bg-white"}`}>Cart ({cartItems.length})</button>
                 </div>
             </div>
+            {
+                !isProductsTab && <CartBody cartItems={cartItems}></CartBody>
+            }
         </div>
     );
 };
