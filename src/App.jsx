@@ -4,6 +4,8 @@ import Banner from './components/banner/Banner'
 import Stats from './components/stats/Stats'
 import Steps from './components/steps/Steps'
 import Footer from './components/footer/Footer'
+import Main from './components/main/Main'
+import ToolCard from './components/toolCard/ToolCard'
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
       <Navbar></Navbar>
       <Banner></Banner>
       <Stats></Stats>
+      <Main></Main>
+      <ToolCard></ToolCard>
       <Steps></Steps>
       <Footer></Footer>
     </>

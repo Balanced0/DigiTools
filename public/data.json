@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "AI Writing Pro",
+    "description": "Generate high-quality blog posts, ads, and marketing copy instantly using advanced AI.",
+    "price": 19.99,
+    "period": "monthly",
+    "tag": "Best Seller",
+    "tagType": "best-seller",
+    "features": [
+      "AI blog generation",
+      "Ad copy writing",
+      "SEO optimization",
+      "Multi-language support"
+    ],
+    "icon": "ai"
+  },
+  {
+    "id": 2,
+    "name": "Design Templates Pack",
+    "description": "Access a huge collection of ready-to-use templates for websites, presentations, and social media.",
+    "price": 29.99,
+    "period": "one-time",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": [
+      "1000+ templates",
+      "Editable designs",
+      "Figma & PSD files",
+      "Commercial use license"
+    ],
+    "icon": "template"
+  },
+  {
+    "id": 3,
+    "name": "Premium Stock Assets",
+    "description": "Download high-quality images, videos, icons, and graphics for your projects.",
+    "price": 12.99,
+    "period": "monthly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": [
+      "Unlimited downloads",
+      "HD & 4K assets",
+      "Royalty-free license",
+      "New content weekly"
+    ],
+    "icon": "assets"
+  },
+  {
+    "id": 4,
+    "name": "Automation Toolkit",
+    "description": "Automate repetitive tasks and workflows to save time and boost productivity.",
+    "price": 24.99,
+    "period": "monthly",
+    "tag": "New",
+    "tagType": "new",
+    "features": [
+      "Workflow automation",
+      "No-code builder",
+      "Third-party integrations",
+      "Task scheduling"
+    ],
+    "icon": "automation"
+  },
+  {
+    "id": 5,
+    "name": "Resume Builder Pro",
+    "description": "Create professional resumes with modern templates and AI-powered suggestions.",
+    "price": 9.99,
+    "period": "yearly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": [
+      "ATS-friendly templates",
+      "AI suggestions",
+      "Export to PDF",
+      "Cover letter builder"
+    ],
+    "icon": "resume"
+  },
+  {
+    "id": 6,
+    "name": "Social Media Content Kit",
+    "description": "Create engaging social media posts with ready-made content and design assets.",
+    "price": 14.99,
+    "period": "monthly",
+    "tag": "Best Seller",
+    "tagType": "best-seller",
+    "features": [
+      "Post templates",
+      "Caption ideas",
+      "Hashtag generator",
+      "Content calendar"
+    ],
+    "icon": "social"
+  }
+]
