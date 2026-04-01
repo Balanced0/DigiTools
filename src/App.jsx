@@ -6,6 +6,7 @@ import Steps from './components/steps/Steps'
 import Footer from './components/footer/Footer'
 import Main from './components/main/Main'
 import ToolCard from './components/toolCard/ToolCard'
+import Pricing from './components/pricing/Pricing'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Main></Main>
       <ToolCard></ToolCard>
       <Steps></Steps>
+      <Pricing></Pricing>
       <Footer></Footer>
     </>
   )
