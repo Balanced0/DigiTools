@@ -18,14 +18,15 @@ const fetchTools = async() =>{
 const toolsPromise = fetchTools();
 function App() {
   const[cartItems, setCartItems] = useState([]);
+  const[cost, setCost] = useState(0);
   return (
     <>
       <Navbar cartItems={cartItems}></Navbar>
       <Banner></Banner>
       <Stats></Stats>
-      <Main cartItems={cartItems}></Main>
+      <Main cartItems={cartItems} cost={cost} setCost={setCost}></Main>
       <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
-        <ToolCardBody toolsPromise={toolsPromise} cartItems={cartItems} setCartItems={setCartItems}></ToolCardBody>
+        <ToolCardBody toolsPromise={toolsPromise} cartItems={cartItems} setCartItems={setCartItems} cost={cost} setCost={setCost}></ToolCardBody>
       </Suspense>
       <Steps></Steps>
       <Pricing></Pricing>

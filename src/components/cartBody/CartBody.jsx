@@ -16,7 +16,7 @@ const iconsList = {
     social: SocialMedia
 };
 
-const CartBody = ({cartItems}) => {
+const CartBody = ({cartItems, cost, setCost}) => {
     return (
         <div class="container mx-auto mb-32">
             <div className="card bg-base-100 shadow-sm">
@@ -46,7 +46,7 @@ const CartBody = ({cartItems}) => {
                 </div>
                 <div className="flex justify-between items-center mb-7">
                     <div className="text-[##627382]">Total:</div>
-                    <div className="font-bold text-2xl">$0</div>
+                    <div className="font-bold text-2xl">${cost}</div>
                 </div>
                 <button className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white font-bold py-4 rounded-full">Proceed to Checkout</button>
             </div>

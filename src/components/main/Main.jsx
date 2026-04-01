@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import CartBody from '../cartBody/CartBody';
 
-const Main = ({cartItems}) => {
+const Main = ({cartItems, cost, setCost}) => {
     const[isProductsTab, setTab] = useState(true);
     return (
         <div>
@@ -14,7 +14,7 @@ const Main = ({cartItems}) => {
                 </div>
             </div>
             {
-                !isProductsTab && <CartBody cartItems={cartItems}></CartBody>
+                !isProductsTab && <CartBody cartItems={cartItems} cost={cost} setCost={setCost}></CartBody>
             }
         </div>
     );
