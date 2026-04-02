@@ -7,6 +7,7 @@ import ShoppingCart from '../../assets/products/shopping-cart.png'
 import SocialMedia from '../../assets/products/social-media.png'
 import Camera from '../../assets/products/camera.png'
 import { FiShoppingCart } from "react-icons/fi";
+import {toast} from 'react-toastify';
 
 const iconsList = {
     ai:  Writing,
@@ -26,6 +27,8 @@ const CartBody = ({cartItems, setCartItems, cost, setCost}) => {
         setCartItems(cartItems.filter(()=> cartItems.length === 0));
         setCost(cost - cost);
     }
+    const notify = (item) => toast.error(`${item} Removed from Cart!`);
+    const notifyCheckout = () => toast.success("Checkout Successful!");
     return (
         <div class="container mx-auto mb-32 p-4">
             <div className="card bg-base-100 shadow-sm">
@@ -51,7 +54,7 @@ const CartBody = ({cartItems, setCartItems, cost, setCost}) => {
                                                         <p className="font-medium text-[#627382]">${item.price}</p>
                                                     </div>
                                                 </div>
-                                                <div onClick={()=>handleRemove(item)} className="text-[#FF3980] font-bold cursor-pointer">Remove</div>
+                                                <div onClick={()=>{handleRemove(item),notify(item.name)}} className="text-[#FF3980] font-bold cursor-pointer">Remove</div>
                                             </div>
                                         </div>
                                     )
@@ -62,7 +65,7 @@ const CartBody = ({cartItems, setCartItems, cost, setCost}) => {
                             <div className="text-[#627382]">Total:</div>
                             <div className="font-bold text-2xl">${cost}</div>
                         </div>
-                        <button onClick={()=>handleCheckout()} className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white font-bold py-4 rounded-full">Proceed to Checkout</button>
+                        <button onClick={()=>{handleCheckout(); notifyCheckout()}} className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white font-bold py-4 rounded-full">Proceed to Checkout</button>
                     </div>
                     )
                 }
