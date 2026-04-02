@@ -44,7 +44,7 @@ const CartBody = ({cartItems, setCartItems, cost, setCost}) => {
                                 cartItems.map((item) =>{
                                     return(
                                         <div key={item.id} className="card card-body bg-base-200 mb-6">
-                                            <div className="flex justify-between items-center">
+                                            <div className="flex gap-4 justify-between items-center">
                                                 <div className="flex gap-4 items-center justify-center">
                                                     <div className="border border-neutral-200 w-13 h-13 rounded-full flex items-center justify-center">
                                                         <img src={iconsList[item.icon]}></img>

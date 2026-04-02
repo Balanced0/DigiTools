@@ -35,15 +35,15 @@ const ToolCard = ({tool, cartItems, setCartItems, cost ,setCost}) => {
                     <div className="border border-neutral-200 w-13 h-13 rounded-full flex items-center justify-center">
                         <img src={iconsList[tool.icon]} className=""></img>
                     </div>
-                    <div>
+                    <div className="">
                         <h3 className="text-2xl font-bold mb-4">{tool.name}</h3>
                         <p className="text-[#627382] mb-4">{tool.description}</p>
-                        <p>
+                        <div className="mt-auto">
                             <span className="text-2xl font-bold">${tool.price}</span>
                             <span className="text-[#627382]">/{tool.period}</span>
-                        </p>
+                        </div>
                     </div>
-                    <ul className="mt-6 flex flex-col gap-2 text-xs">
+                    <ul className="mt-auto flex flex-col gap-2 text-xs">
                         {
                             tool.features.map((feature, index) =>{
                                 return(
@@ -56,7 +56,7 @@ const ToolCard = ({tool, cartItems, setCartItems, cost ,setCost}) => {
                         }
                     </ul>
                     <div className="mt-6">
-                        <button onClick={()=>{setCartItems([...cartItems, tool]); setCost(cost + tool.price); setIsAdded(true); notify()}} disabled={isAdded} className={`btn font-bold py-4 w-full rounded-full ${isAdded?"bg-green-600 text-white":"bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white"}`}>{isAdded? <span className="flex gap-2 justify-center items-center"><FaCheck /> Added to Cart!</span> : "Buy Now"}</button>
+                        <button onClick={()=>{setCartItems([...cartItems, tool]); setCost(cost + tool.price); setIsAdded(true); notify()}} disabled={isAdded} className={`btn font-bold py-4 w-full mt-auto rounded-full ${isAdded?"bg-green-600 text-white":"bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white"}`}>{isAdded? <span className="flex gap-2 justify-center items-center"><FaCheck /> Added to Cart!</span> : "Buy Now"}</button>
                     </div>
                 </div>
             </div>

@@ -22,9 +22,9 @@ const Banner = () => {
                             Access premium AI tools, design assets, templates, and productivity software—all in one place. Start creating faster today. Explore Products
                         </p>
                         <div className="flex gap-4">
-                            <button className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] px-4 py-3 text-white rounded-full">Explore Products</button>
+                            <button className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] px-4 py-3 text-white rounded-full cursor-pointer">Explore Products</button>
                             <div className="rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] p-[2px]">
-                                <button className="bg-white px-4 py-3 rounded-full flex gap-1 items-center"><img src={play} className="w-4 h-4"></img><span className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">Watch Demo</span></button>
+                                <button className="bg-white px-4 py-3 rounded-full flex gap-1 items-center cursor-pointer"><img src={play} className="w-4 h-4"></img><span className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">Watch Demo</span></button>
                             </div>
                         </div>
                     </div>
