@@ -22,6 +22,10 @@ const CartBody = ({cartItems, setCartItems, cost, setCost}) => {
         setCartItems(cartItems.filter((card) => card.id !== cardRemove.id));
         setCost(cost - cardRemove.price);
     }
+    const handleCheckout = () =>{
+        setCartItems(cartItems.filter(()=> cartItems.length === 0));
+        setCost(cost - cost);
+    }
     return (
         <div class="container mx-auto mb-32 p-4">
             <div className="card bg-base-100 shadow-sm">
@@ -58,7 +62,7 @@ const CartBody = ({cartItems, setCartItems, cost, setCost}) => {
                             <div className="text-[#627382]">Total:</div>
                             <div className="font-bold text-2xl">${cost}</div>
                         </div>
-                        <button className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white font-bold py-4 rounded-full">Proceed to Checkout</button>
+                        <button onClick={()=>handleCheckout()} className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white font-bold py-4 rounded-full">Proceed to Checkout</button>
                     </div>
                     )
                 }
