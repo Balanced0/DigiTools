@@ -10,6 +10,7 @@ import Pricing from './components/pricing/Pricing'
 import ToolCardBody from './components/toolCardBody/ToolCardBody'
 import { Suspense, useState } from 'react'
 import CartBody from './components/cartBody/CartBody'
+import { ToastContainer } from 'react-toastify';
 
 const fetchTools = async() =>{
   const res = await fetch('/data.json');
@@ -31,6 +32,18 @@ function App() {
       <Steps></Steps>
       <Pricing></Pricing>
       <Footer></Footer>
+      <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss={false}
+            draggable={false}
+            pauseOnHover={false}
+            theme="light"
+            />
     </>
   )
 }

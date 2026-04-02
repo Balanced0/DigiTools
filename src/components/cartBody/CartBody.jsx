@@ -19,7 +19,7 @@ const iconsList = {
 
 const CartBody = ({cartItems, cost, setCost}) => {
     return (
-        <div class="container mx-auto mb-32">
+        <div class="container mx-auto mb-32 p-4">
             <div className="card bg-base-100 shadow-sm">
                 {
                     cartItems.length === 0?
