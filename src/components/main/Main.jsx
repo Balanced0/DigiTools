@@ -2,7 +2,7 @@ import React, {Suspense} from 'react';
 import CartBody from '../cartBody/CartBody';
 import ToolCardBody from '../toolCardBody/ToolCardBody';
 
-const Main = ({toolsPromise, cartItems, setCartItems, cost, setCost, isProductsTab, setTab}) => {
+const Main = ({toolsPromise, cartItems, setCartItems, cost, setCost, isProductsTab, setTab, cartRef}) => {
     return (
         <div>
             <div className="container mx-auto text-center flex flex-col items-center justify-center">
@@ -19,7 +19,9 @@ const Main = ({toolsPromise, cartItems, setCartItems, cost, setCost, isProductsT
                         <ToolCardBody toolsPromise={toolsPromise} cartItems={cartItems} setCartItems={setCartItems} cost={cost} setCost={setCost}></ToolCardBody>
                     </Suspense>
                 ):(
-                    <CartBody cartItems={cartItems} setCartItems={setCartItems} cost={cost} setCost={setCost}></CartBody>
+                    <div ref={cartRef}>
+                        <CartBody cartItems={cartItems} setCartItems={setCartItems} cost={cost} setCost={setCost}></CartBody>
+                    </div>
                 )
             }
         </div>

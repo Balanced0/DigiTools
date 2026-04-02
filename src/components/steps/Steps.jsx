@@ -7,7 +7,7 @@ const Steps = () => {
     return (
         <div className="bg-[#F9FAFC]">
             <div className="container mx-auto text-center p-4">
-                <h2 className="font-extrabold text-5xl pt-32">Get Started in 3 Steps</h2>
+                <h2 className="font-extrabold text-5xl pt-32 text-black">Get Started in 3 Steps</h2>
                 <p className="text-[#627382] mt-4 mb-10">Start using premium digital tools in minutes, not hours.</p>
                 <div className="pb-32 grid grid-cols-1 gap-8 md:grid-cols-3">
                     <div className="card relative bg-base-100 shadow-sm">

@@ -8,7 +8,7 @@ import Main from './components/main/Main'
 import ToolCard from './components/toolCard/ToolCard'
 import Pricing from './components/pricing/Pricing'
 import ToolCardBody from './components/toolCardBody/ToolCardBody'
-import { Suspense, useState } from 'react'
+import { Suspense, useState, useRef } from 'react'
 import CartBody from './components/cartBody/CartBody'
 import { ToastContainer } from 'react-toastify';
 
@@ -21,12 +21,19 @@ function App() {
   const[cartItems, setCartItems] = useState([]);
   const[cost, setCost] = useState(0);
   const[isProductsTab, setTab] = useState(true);
+  const cartRef = useRef(null);
+  const goToCart = () => {
+      setTab(false);
+      if (cartRef.current) {
+        cartRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
+  };
   return (
     <>
-      <Navbar cartItems={cartItems} isProductsTab={isProductsTab} setTab={setTab}></Navbar>
+      <Navbar cartItems={cartItems} isProductsTab={isProductsTab} setTab={setTab} goToCart={goToCart}></Navbar>
       <Banner></Banner>
       <Stats></Stats>
-      <Main toolsPromise={toolsPromise} cartItems={cartItems} setCartItems={setCartItems} cost={cost} setCost={setCost} isProductsTab={isProductsTab} setTab={setTab}></Main>
+      <Main toolsPromise={toolsPromise} cartItems={cartItems} setCartItems={setCartItems} cost={cost} setCost={setCost} isProductsTab={isProductsTab} setTab={setTab} cartRef={cartRef}></Main>
       <Steps></Steps>
       <Pricing></Pricing>
       <Footer></Footer>

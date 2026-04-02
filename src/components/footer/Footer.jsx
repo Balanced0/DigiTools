@@ -13,31 +13,31 @@ const Footer = () => {
                 </div>
                 <div className="text-white">
                     <h4 className="text-xl font-medium mb-4">Product</h4>
-                    <p className="mb-4">Features</p>
-                    <p className="mb-4">Pricing</p>
-                    <p className="mb-4">Templates</p>
-                    <p className="mb-4">Integrations</p>
+                    <p className="mb-4 cursor-pointer">Features</p>
+                    <p className="mb-4 cursor-pointer">Pricing</p>
+                    <p className="mb-4 cursor-pointer">Templates</p>
+                    <p className="mb-4 cursor-pointer">Integrations</p>
                 </div>
                 <div className="text-white">
                     <h4 className="text-xl font-medium mb-4">Company</h4>
-                    <p className="mb-4">About</p>
-                    <p className="mb-4">Blog</p>
-                    <p className="mb-4">Careers</p>
-                    <p className="mb-4">Press</p>
+                    <p className="mb-4 cursor-pointer">About</p>
+                    <p className="mb-4 cursor-pointer">Blog</p>
+                    <p className="mb-4 cursor-pointer">Careers</p>
+                    <p className="mb-4 cursor-pointer">Press</p>
                 </div>
                 <div className="text-white">
                     <h4 className="text-xl font-medium mb-4">Resources</h4>
-                    <p className="mb-4">Documentation</p>
-                    <p className="mb-4">Help Center</p>
-                    <p className="mb-4">Community</p>
-                    <p className="mb-4">Contact</p>
+                    <p className="mb-4 cursor-pointer">Documentation</p>
+                    <p className="mb-4 cursor-pointer">Help Center</p>
+                    <p className="mb-4 cursor-pointer">Community</p>
+                    <p className="mb-4 cursor-pointer">Contact</p>
                 </div>
                 <div className="text-white">
                     <h4 className="text-xl font-medium mb-4">Social Links</h4>
                     <div className="flex gap-4">
-                        <FaInstagram />
-                        <FaFacebook />
-                        <FaXTwitter />
+                        <FaInstagram className="cursor-pointer"/>
+                        <FaFacebook className="cursor-pointer"/>
+                        <FaXTwitter className="cursor-pointer"/>
                     </div>
                 </div>
             </div>
