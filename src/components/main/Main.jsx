@@ -19,7 +19,7 @@ const Main = ({toolsPromise, cartItems, setCartItems, cost, setCost, isProductsT
                         <ToolCardBody toolsPromise={toolsPromise} cartItems={cartItems} setCartItems={setCartItems} cost={cost} setCost={setCost}></ToolCardBody>
                     </Suspense>
                 ):(
-                    <CartBody cartItems={cartItems} cost={cost} setCost={setCost}></CartBody>
+                    <CartBody cartItems={cartItems} setCartItems={setCartItems} cost={cost} setCost={setCost}></CartBody>
                 )
             }
         </div>

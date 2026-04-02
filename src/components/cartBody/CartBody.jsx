@@ -17,7 +17,11 @@ const iconsList = {
     social: SocialMedia
 };
 
-const CartBody = ({cartItems, cost, setCost}) => {
+const CartBody = ({cartItems, setCartItems, cost, setCost}) => {
+    const handleRemove = (cardRemove)=>{
+        setCartItems(cartItems.filter((card) => card.id !== cardRemove.id));
+        setCost(cost - cardRemove.price);
+    }
     return (
         <div class="container mx-auto mb-32 p-4">
             <div className="card bg-base-100 shadow-sm">
@@ -43,7 +47,7 @@ const CartBody = ({cartItems, cost, setCost}) => {
                                                         <p className="font-medium text-[#627382]">${item.price}</p>
                                                     </div>
                                                 </div>
-                                                <div className="text-[#FF3980] font-bold cursor-pointer">Remove</div>
+                                                <div onClick={()=>handleRemove(item)} className="text-[#FF3980] font-bold cursor-pointer">Remove</div>
                                             </div>
                                         </div>
                                     )
