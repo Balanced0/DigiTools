@@ -56,7 +56,7 @@ const ToolCard = ({tool, cartItems, setCartItems, cost ,setCost}) => {
                         }
                     </ul>
                     <div className="mt-6">
-                        <button onClick={()=>{setCartItems([...cartItems, tool]); setCost(cost + tool.price); setIsAdded(true); notify()}} className={`btn font-bold py-4 w-full rounded-full ${isAdded?"bg-green-600 text-white":"bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white"}`}>{isAdded? <span className="flex gap-2 justify-center items-center"><FaCheck /> Added to Cart!</span> : "Buy Now"}</button>
+                        <button onClick={()=>{setCartItems([...cartItems, tool]); setCost(cost + tool.price); setIsAdded(true); notify()}} disabled={isAdded} className={`btn font-bold py-4 w-full rounded-full ${isAdded?"bg-green-600 text-white":"bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white"}`}>{isAdded? <span className="flex gap-2 justify-center items-center"><FaCheck /> Added to Cart!</span> : "Buy Now"}</button>
                     </div>
                 </div>
             </div>

@@ -25,10 +25,7 @@ function App() {
       <Navbar cartItems={cartItems}></Navbar>
       <Banner></Banner>
       <Stats></Stats>
-      <Main cartItems={cartItems} cost={cost} setCost={setCost}></Main>
-      <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
-        <ToolCardBody toolsPromise={toolsPromise} cartItems={cartItems} setCartItems={setCartItems} cost={cost} setCost={setCost}></ToolCardBody>
-      </Suspense>
+      <Main toolsPromise={toolsPromise} cartItems={cartItems} setCartItems={setCartItems} cost={cost} setCost={setCost}></Main>
       <Steps></Steps>
       <Pricing></Pricing>
       <Footer></Footer>

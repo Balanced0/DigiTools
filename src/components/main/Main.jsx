@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React, {useState, Suspense} from 'react';
 import CartBody from '../cartBody/CartBody';
+import ToolCardBody from '../toolCardBody/ToolCardBody';
 
-const Main = ({cartItems, cost, setCost}) => {
+const Main = ({toolsPromise, cartItems, setCartItems, cost, setCost}) => {
     const[isProductsTab, setTab] = useState(true);
     return (
         <div>
@@ -14,7 +15,13 @@ const Main = ({cartItems, cost, setCost}) => {
                 </div>
             </div>
             {
-                !isProductsTab && <CartBody cartItems={cartItems} cost={cost} setCost={setCost}></CartBody>
+                isProductsTab? (
+                    <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
+                        <ToolCardBody toolsPromise={toolsPromise} cartItems={cartItems} setCartItems={setCartItems} cost={cost} setCost={setCost}></ToolCardBody>
+                    </Suspense>
+                ):(
+                    <CartBody cartItems={cartItems} cost={cost} setCost={setCost}></CartBody>
+                )
             }
         </div>
     );
