@@ -4,7 +4,7 @@ A clean and professional React.js web application that simulates an e-commerce p
 
 ---
 
-# Tech Stack
+## Tech Stack
 - React.js
 - Tailwind CSS
 - DaisyUI
@@ -15,10 +15,10 @@ A clean and professional React.js web application that simulates an e-commerce p
 
 ---
 
-# Features
-- **Dynamic Product Listing**
+## Features
+- **Dynamic Product Listing:**
     Products (Tools) are loaded from JSON and rendered as cards with name, price, features and icons.
-- **Shopping Cart System** 
+- **Shopping Cart System:** 
     Users can add/remove items, see total cost, and view cart count from the cart icon in the navbar.
-- **Window Navigation** 
+- **Window Navigation:** 
     Users can switch between product list and cart while keeping state intact.
