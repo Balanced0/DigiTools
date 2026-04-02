@@ -1,9 +1,8 @@
-import React, {useState, Suspense} from 'react';
+import React, {Suspense} from 'react';
 import CartBody from '../cartBody/CartBody';
 import ToolCardBody from '../toolCardBody/ToolCardBody';
 
-const Main = ({toolsPromise, cartItems, setCartItems, cost, setCost}) => {
-    const[isProductsTab, setTab] = useState(true);
+const Main = ({toolsPromise, cartItems, setCartItems, cost, setCost, isProductsTab, setTab}) => {
     return (
         <div>
             <div className="container mx-auto text-center flex flex-col items-center justify-center">

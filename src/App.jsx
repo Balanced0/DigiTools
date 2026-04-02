@@ -20,12 +20,13 @@ const toolsPromise = fetchTools();
 function App() {
   const[cartItems, setCartItems] = useState([]);
   const[cost, setCost] = useState(0);
+  const[isProductsTab, setTab] = useState(true);
   return (
     <>
-      <Navbar cartItems={cartItems}></Navbar>
+      <Navbar cartItems={cartItems} isProductsTab={isProductsTab} setTab={setTab}></Navbar>
       <Banner></Banner>
       <Stats></Stats>
-      <Main toolsPromise={toolsPromise} cartItems={cartItems} setCartItems={setCartItems} cost={cost} setCost={setCost}></Main>
+      <Main toolsPromise={toolsPromise} cartItems={cartItems} setCartItems={setCartItems} cost={cost} setCost={setCost} isProductsTab={isProductsTab} setTab={setTab}></Main>
       <Steps></Steps>
       <Pricing></Pricing>
       <Footer></Footer>

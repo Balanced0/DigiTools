@@ -4,7 +4,7 @@ import { MdLogin } from "react-icons/md";
 
 
 
-const Navbar = ({cartItems}) => {
+const Navbar = ({cartItems, isProductsTab, setTab}) => {
     return (
         <div>
             <div className="navbar bg-base-100 shadow-sm">
@@ -43,7 +43,7 @@ const Navbar = ({cartItems}) => {
                     <div className="navbar-end">
                         <div className="relative">
                             <div className={`absolute text-white bg-red-500 min-w-[20px] h-5 px-1 rounded-full flex items-center justify-center -right-3 -top-3 ${cartItems.length < 1? "hidden":""}`}>{cartItems.length}</div>
-                            <a className="cursor-pointer"><FiShoppingCart /></a>
+                            <a className="cursor-pointer" onClick={()=>setTab(false)}><FiShoppingCart /></a>
                         </div>
                         <a className="hidden md:inline mx-4 cursor-pointer">Login</a>
                         <a className="hidden md:inline-flex btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full px-4 py-3">Get Started</a>
